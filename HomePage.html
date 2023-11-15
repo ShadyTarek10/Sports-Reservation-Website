@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        .zoom {
+          padding: 5px;
+           
+          transition: transform .2s; /* Animation */
+          width: 300px;
+          height: 125px;
+          margin: 0 auto;
+        }
+        
+        .zoom:hover {
+          transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        .zoom1 {
+          padding: 5px;
+           
+          transition: transform .2s; /* Animation */
+          width: 300px;
+          height: 125px;
+          margin: 0 auto;
+        }
+        
+        .zoom1:hover {
+          transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+      </style>
+        <title>Home Page</title>
+        <link href="style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A3C7D6; margin-bottom: 0;">
+            <a class="navbar-brand" href="#"><b>Outdoor Escape</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler9"
+                aria-controls="navbarToggler9" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler9">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HomePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Coach_Info1.html">Coaches</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Events_Modified.html">Events</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Login  </a>
+                        <ul class="dropdown-menu fade-up">
+                          <li><a class="dropdown-item" href="loginform1.html"> Client</a></li>
+                          <li><a class="dropdown-item" href="loginform1.html"> Staff </a></li>
+                        </ul>
+                    </li>
+                    
+
+                    
+
+
+
+                    
+                    <div class="icon" >
+                      
+                      <img src="img/icon.png" width="50" height="40" alt="Tennis-icon">
+                      <img src="img/escapeout.jpeg" width="50" height="40" alt="Tennis-icon">
+                    </div>
+                </ul>
+                
+            </div>
+        </nav>
+        <!--navbar-->
+
+        
+
+     <!--sliderrr-->
+    <div class="bckgrd">
+      <div class="tennisicon">
+          <img src="img/tennisicon.png " alt=".." style=" width: 90px; height: 90px;">
+      </div>
+      <div class="padelicon">
+        <img src="img/padelicon.png " alt=".." style=" width: 90px; height: 90px;">
+      </div>
+      <div class="girlicon">
+        <img src="img/tennisicongirl.png " alt=".." style=" width: 90px; height: 90px;">
+      </div>
+      <div class="footballicon">
+        <img src="img/football.png " alt=".." style=" width: 90px; height: 90px;">
+      </div>
+     <div class="pxwide" class="img-fluid rounded-4 hover-shadow" style="margin-left: auto; margin-right: auto; margin-bottom: 20px;" >
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" >
+              <div class="carousel-item active" >
+              <div class="overlay"></div>
+                <img src="img/1.jpeg" class="d-block w-100"  alt="..."  />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="img/7.jpeg" class="d-block w-100" alt="..."  />
+                <div class="carousel-caption d-none d-md-block" data-mdb-interval="300">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="overlay"></div>
+                <img src="img/6.jpeg" class="d-block w-100" alt="..."  />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>    
+    </div>   
+      <div style="border-width:6px; border-style:double; border-color:#06283d; padding: 1em; margin-top: 20px; width: 1002px; height: 200px; margin-left: 262px;">
+        <p ><h1>Our Vision: </h1><br>Sports Community’s vision is to help build strong, thriving local communities and assist grassroots sports clubs to succeed by giving club volunteers the extensive knowledge and training they need to achieve amazing results both on and off the field.</p>
+      </div>
+      
+      
+      <!--Our team-->
+      <div class="container">
+        <div style="text-align: center; " class="zoom"  >
+          <h1 class="heading" style="font-family: Garamond, serif; margin-left: 0px;"><u><b> Our team</b> </u></h1>
+      </div>
+        <div class="row vh-60" >
+          <div class="col-sm-6 col-lg-3 my-auto">
+            <div class="box shadow-sm p-4">
+              <div class="image-wrapper mb-3">
+                <img class="img-fluid" src="img/person3.jpeg" alt="..." />
+              </div>
+              <div class="box-desc">
+                <h5>Jana El7ala2</h5>
+                <p>Padel Coach</p>
+              </div>
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-auto">
+            <div class="box shadow-sm p-4">
+              <div class="image-wrapper mb-3">
+                <img class="img-fluid" src="img/person4.jpeg" alt="..." />
+              </div>
+              <div class="box-desc">
+                <h5>Ismail Gamar Eldin</h5>
+                <p>Tennis Coach</p>
+              </div>
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-auto">
+            <div class="box shadow-sm p-4">
+              <div class="image-wrapper mb-3">
+                <img class="img-fluid" src="img/person5.jpeg" alt="..." />
+              </div>
+              <div class="box-desc">
+                <h5>Marwan Mohsen</h5>
+                <p>Padel Coach</p>
+              </div>
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 my-auto">
+            <div class="box shadow-sm p-4">
+              <div class="image-wrapper mb-3">
+                <img class="img-fluid" src="img/person6.jpeg" alt="..." />
+              </div>
+              <div class="box-desc">
+                <h5>Khedr Karawita</h5>
+                <p>Football Coach</p>
+              </div>
+              
+              <ul class="social">
+                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>	
+         
+
+        <!--previous events-->
+        <div style="text-align: center;" class="zoom" >
+          <h1 class="heading" style="font-family: Garamond, serif; margin-left: 0px;"><u><b> Previous Events</b> </u></h1>
+      </div>
+        <div style="margin-top: 75px; margin-left: 200px;  margin-top: 10px;"> 
+          
+        <div class="row" >
+          <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;  ">
+           <a href="#" class="wrapper">
+            <img class="text7 img7" src="img/eye.png">
+             <img src="img/tennisevent.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail" class="img7">      
+           </a>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;">
+            <a href="#" class="wrapper">
+              <img class="text7 img7" src="img/eye.png"> 
+            <img src="img/t4.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail">      
+            </a>  
+          </div>
+          <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;">
+            <a href="#" class="wrapper">
+              <img class="text7 img7" src="img/eye.png"> 
+            <img src="img/t5.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail">      
+            </a>  
+          </div>
+           <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;">
+            <a href="#" class="wrapper">
+              <img class="text7 img7" src="img/eye.png">
+            <img src="img/t6.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail">      
+            </a>  
+          </div>
+          <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;">
+            <a href="#" class="wrapper">
+              <img class="text7 img7" src="img/eye.png"> 
+            <img src="img/t7.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail">      
+            </a>  
+          </div>
+          <div class="col-sm-6 col-md-4 mb-3" style="width: 400px; height: 500px;">
+            <a href="#" class="wrapper">
+              <img class="text7 img7" src="img/eye.png"> 
+            <img src="img/padelevent.jpeg" style="width: 400px; height: 400px;" alt="" class="fluid img-thumbnail">      
+            </a>  
+          </div>
+           
+        </div>
+      </div>
+     </div> 
+        
+
+
+        <!-- Footer -->
+        <div style="margin-top: 20px;" >
+            <!-- Footer -->
+            <footer
+                    class="text-center text-lg-start text-white"
+                    style="background-color: #06283d;"
+                    >
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Links -->
+                <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">FOOTER CONTENT</h5>
+        
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae modi cum ipsam ad, illo possimus laborum ut
+                        reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+                        Reiciendis assumenda iusto sapiente inventore animi?
+                    </p>
+                    </div>
+                    <!--Grid column-->
+        
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+        
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                        <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--Grid column-->
+        
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+        
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                        <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--Grid column-->
+        
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+        
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                        <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--Grid column-->
+        
+                    <!--Grid column-->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+        
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                        <a href="#!" class="text-white">Link 1</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 2</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 3</a>
+                        </li>
+                        <li>
+                        <a href="#!" class="text-white">Link 4</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
+        
+                <hr class="mb-4" />
+        
+                <!-- Section: CTA -->
+                <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                    <span class="me-3">Register for free</span>
+                    <button type="button" class="btn btn-outline-light btn-rounded">
+                    Sign up!
+                    </button>
+                </p>
+                </section>
+                <!-- Section: CTA -->
+        
+                <hr class="mb-4" />
+        
+                <!-- Section: Social media -->
+                <section class="mb-4 text-center">
+                  <span class="me-3">Follow us on</span>
+                <!-- Facebook -->
+                <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fa fa-facebook-f"> </i
+                    ></a>
+        
+                <!-- Twitter -->
+                <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fa fa-twitter"></i
+                    ></a>
+        
+                <!-- Google -->
+                <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fa fa-google"></i
+                    ></a>
+        
+                <!-- Instagram -->
+                <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    href="#!"
+                    role="button"
+                    ><i class="fa fa-instagram"></i
+                    ></a>
+        
+                
+        
+                
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+        
+            
+            </footer>
+            <!-- Footer -->
+        </div>
+        <!-- End of .container -->
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    </body>
+
+
+    </body>
+</html>

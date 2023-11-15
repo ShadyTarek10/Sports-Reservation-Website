@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style1.css">
+
+<style>
+    body {
+      background-image: url('img/background.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+    body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(157, 173, 173, 0.5), rgba(157, 173, 173, 0.5)), url("img2/events.jpeg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+    </style>
+</head>
+<body>
+  <!--navbar-->
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A3C7D6; margin-bottom: 0;">
+  <a class="navbar-brand" href="#"><b>Outdoor Escape</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler9"
+      aria-controls="navbarToggler9" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarToggler9">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="reservationpics.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Coach_Info1.html">Coaches</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Events_Modified.html">Events</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+          </li>
+      
+          <li class="nav-item " >
+              <a class="nav-link" href="HomePage.html" >  Logout  </a>
+              
+          </li>
+          
+          <div class="icon" >
+            
+              <img style="border: 0px;" src="img/icon.png" width="50" height="40" alt="Tennis-icon">
+              <img  style="border: 0px;" src="img/escapeout.jpeg" width="50" height="40" alt="Tennis-icon">
+            </div>
+      </ul>
+      
+  </div>
+</nav>
+<!--navbar-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<div class="hero-image">
+  <div class="hero-text">
+  </div>
+</div>
+
+
+
+<!-- Display the countdown timer in an element -->
+<div class="zoom">
+    <div class="center">
+        <h1 id="demo" style="font-size:xx-large;font-weight: bold;" ></h1>
+    </div>
+</div>
+
+<script>
+    
+// Set the date we're counting down to
+var countDownDate = new Date("march 1, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+//--HOVER TABS---------------------------------------------------------------------------------------------------------------------------
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+//---POPUp Chat------------------------------------------------------------------------------------------------------------------------
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+//---qoutes slide show-----------------------------------------------------------------------------------------------------------------
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<!-------Vertical Tabs---------------------------------------------------------------------------------------------------------------------------->
+<div>
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'Organizers')"><div id="vtabButtons">Organizers</div></button>
+  <button class="tablinks" onmouseover="openCity(event, 'Types')"><div id="vtabButtons">Event Types</div></button>
+  <button class="tablinks" onmouseover="openCity(event, 'Dates')"><div id="vtabButtons">Dates</div></button>
+</div>
+
+<div id="Organizers" class="tabcontent">
+  <h2>Organizers</h2>
+  <h3>
+    <ul>
+     <li style="font-weight:normal"> Jack Stephan;<br> <p>Coach Jack is one of the most calibre trainers in the tennis field of training.
+      <br>with a teaching experience more than 7 Years!</p><br> </li>
+    <li style="font-weight:normal">Coach Everly Green;<br> <p>Coach Everly is one of the most calibre trainers in the Padel field of training.
+      <br>with a teaching experience more than 5 Years! </p><br> </li>
+    <li style="font-weight:normal">Coach Robin Mathew;<br> <p>Coach Robin is one of the most calibre trainers in the FootBall field of training.
+      <br>with a teaching experience more than 8 Years! </p><br> </li>
+    </ul>
+  </h3>
+</div>
+
+<div id="Types" class="tabcontent">
+  <h2>Event Types</h2>
+  <h3>
+    <ul>
+      <li style="font-weight:normal"> Gold Events;<br> <p>Gold Events are usually performed every month to collaberate with our top notch clients!
+       <br>This Event gets the chance to our clients to have the most thrilling experience of competetion in their most played Sport.</p><br> </li>
+     <li style="font-weight:normal">Silver Events;<br> <p>Silver Events are usually performed every 6 Weeks to collaberate with our competitive clients!
+       <br>This Event gets the chance to our Silver Rising clients to have the experience of competetion in their most played Sport. </p><br> </li>
+     <li style="font-weight:normal">Bronz Events;<br><p> Bronz Events are usually performed every 8 Weeks to collaberate with our Ambitious Atheletes to be!
+       <br>This Event gets the chance to our Bronz Ambitious clients to have the experience of triaing and competeing in their most played Sport. </p><br> </li>
+     </ul>
+  </h3>
+</div>
+
+<div id="Dates" class="tabcontent">
+  <h2>Dates</h2>
+  <h3><p>Bunch of events are held continuously </p>
+    <ul>
+          <li>The 29th Of each month for our Golden Clients in the 3 Sports.</li>
+          <li>Every 6 Weeks our Silver Clients get to participate in their very awaiting Event.</li>
+          <li>The 3rd every each month is made for our Bronz Clients to participate in thier special Event.</li>
+    </ul>
+  </h3>
+</div>
+<br>
+</div>
+<br><hr>
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+
+    <div class="chat-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h3> </h3>  
+  
+      <label for="msg"><b>Message</b></label>
+      <textarea placeholder="Type message.." name="msg" required></textarea>
+  
+      <button type="submit" class="btn">Send</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+
+
+<div >
+  <div class="container">
+    <img id="organizers" 
+         src="img2/person1.jpeg"
+         alt="1st Organizer" > 
+        
+    <img id="organizers"
+         src="img2/person2.jpeg"
+         alt="1st Organizer">    
+    <img id="organizers"
+         src="img2/person3.jpeg"
+         alt="1st Organizer"> 
+   <img id="organizers"
+         src="img2/person4.jpeg"
+         alt="1st Organizer"> 
+   <img id="organizers"
+         src="img2/person5.jpeg"
+         alt="1st Organizer">
+   <img id="organizers"
+         src="img2/person6.jpeg"
+         alt="1st Organizer">
+
+  </div>
+</div>
+
+<!-----Sponsor Cards--------------------------------------------------------------------------------------------------------------------------------------->
+<div class="container"><br><hr><br></div>
+<div class="container" style="left: 50px;">
+<div id="leftbox">
+   <div class="card-sponsor">
+       <img src="img2/mastercard.jpeg" alt="Avatar" style="width:90%" >
+       <div class="container-sponsor">
+         <h4 style="color:darkgreen;"><b><u>MasterCard</u></b></h4>
+         <p style="font-weight:bold ;">Sponsors this month's Events</p>
+   </div>
+   </div>
+</div>
+
+<div id="middlebox1">
+<div class="card-sponsor">
+  <img src="img2/pepsi.jpeg" alt="Avatar" style="width:90%" >
+  <div class="container-sponsor">
+    <h4 style="color:darkgreen ;"><b><u>Pepsi</u></b></h4>
+    <p style="font-weight: bold;">Sponsors All our Events!</p>
+  </div>
+</div>
+</div>
+
+<div id="middlebox2">
+<div class="card-sponsor">
+  <img src="img2/adidas.jpeg" alt="Avatar" style="width:90%" >
+  <div class="container-sponsor">
+    <h4 style="color:darkgreen"><b><u>Adidas</u></b></h4>
+    <p style="font-weight: bold">Sponsors Golden Events</p>
+  </div>
+</div>
+</div>
+
+<div id="rightbox">
+<div class="card-sponsor">
+  <img src="img2/redbull.jpeg" alt="Avatar" style="width:90%" >
+  <div class="container-sponsor">
+    <h4 style="color:darkgreen;"><b><u>Redbull</u></b></h4>
+    <p style="font-weight:bold">Sponsors Silver Eventsr</p>
+  </div>
+</div>
+</div>
+
+
+</div>
+
+<!---------qoutes slide show--------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <h2><q>I love you the more in that I believe you had liked me for my own sake and for nothing else</q></h2>
+      <h3><p class="author">- John Keats</p></h3>
+    </div>
+  
+    <div class="mySlides">
+      <h2><q>But man is not made for defeat. A man can be destroyed but not defeated.</q></h2>
+      <h3><p class="author">- Ernest Hemingway</p></h3>
+    </div>
+  
+    <div class="mySlides">
+      <h2><q>I have not failed. I've just found 10,000 ways that won't work.</q></h2>
+      <h3><p class="author">- Thomas A. Edison</p></h3>
+    </div>
+  
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+  
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-user"></i></p>
+        <h3>11+</h3>
+        <p>Partners</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-check"></i></p>
+        <h3>55+</h3>
+        <p>Projects</p>
+      </div>
+    </div>
+
+  
+  <!-------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-smile-o"></i></p>
+        <h3>100+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <p><i class="fa fa-google"></i></p>
+        <h3>100+</h3>
+        <p>Events</p>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+
+
+
+
+ <!-- Footer -->
+ <div style = "position:relative;  top:20px;">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #06283d"
+            >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae modi cum ipsam ad, illo possimus laborum ut
+                reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+                Reiciendis assumenda iusto sapiente inventore animi?
+            </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+
+            <ul class="list-unstyled mb-0">
+                <li>
+                <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                <a href="#!" class="text-white">Link 4</a>
+                </li>
+            </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="mb-4" />
+
+        <!-- Section: CTA -->
+        <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+            <button type="button" class="btn btn-outline-light btn-rounded">
+            Sign up!
+            </button>
+        </p>
+        </section>
+        <!-- Section: CTA -->
+
+        <hr class="mb-4" />
+
+        <!-- Section: Social media -->
+        <section class="mb-4 text-center">
+        <!-- Facebook -->
+        <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fa fa-facebook-f"> </i
+            ></a>
+
+        <!-- Twitter -->
+        <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fa fa-twitter"></i
+            ></a>
+
+        <!-- Google -->
+        <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fa fa-google"></i
+            ></a>
+
+        <!-- Instagram -->
+        <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fa fa-instagram"></i
+            ></a>
+
+        
+
+        
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    
+    </footer>
+    <!-- Footer -->
+</div>
+</body>
+</html>

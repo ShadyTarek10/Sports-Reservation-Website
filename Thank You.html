@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+
+    <style>
+        body {
+          background-image: url('img2/graybg.jpeg');
+          background-repeat: no-repeat;
+          background-attachment:fixed;  
+          background-size: cover;
+        }
+      
+        body, html {
+    height: 100%;
+}
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(157, 173, 173, 0.5), rgba(157, 173, 173, 0.5)), url("img2/conf.jpeg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/*----popups-------------------------------------------------------------------------------------------------------------------------*/
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/*------zigzag layout-----------------------------------------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+</style>
+ 
+
+</head>
+<body>
+ <!--navbar-->
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #A3C7D6; margin-bottom: 0;">
+  <a class="navbar-brand" href="#"><b>Outdoor Escape</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler9"
+      aria-controls="navbarToggler9" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarToggler9">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+          </li>
+      
+          <li class="nav-item " >
+              <a class="nav-link" href="loginform1.html" >  Logout  </a>
+              
+          </li>
+          
+          <div class="icon" >
+            
+              <img  style="border:none" src="img/escapeout.jpeg"  width="50" height="40" alt="Tennis-icon">
+              <img style="border:none" src="img/icon.png" width="50" height="40" alt="Tennis-icon">
+            </div>
+      </ul>
+      
+  </div>
+</nav>
+
+   <!--navbar----------------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------------------------>
+
+<div class="hero-image">
+    <div class="hero-text">
+        
+    </div>
+  </div>
+  <!--------------------------------------------------------------------------------------------------------------------------------------------->
+  <h1 class="zoom" class="glow" style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">You Reservation was Confirmed</h1>
+  <h2 class="zoom" style="text-align: center ;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">Thank You!</h2>
+  
+  <div id="thanks">
+      <h1> <br>
+        <span class='random-word'></span>
+      </h1>
+    </div>
+  
+  <div class="center">
+     <!--<img src="C:\Users\ADMIN\Desktop\7th-Term\Web Engineering\WebProject\bg.jpeg" alt="" width="1000" height="500"> -->
+     <form action="/submit" method="post">
+      <button class="button button2", class="center" formaction="reservationpics.html" >Go To Home Page</button>
+     </form>  
+  </div>
+  <hr>
+  <!------------------------------------------------------------------------------------------------------------------------------------->
+  
+  <h2 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;margin-left: 46%;"><b><i><u>Brief History</u></i></b></h2>
+
+ <!---zigzag layout--------------------------------------------------------------------------------------------------------------->
+ <div class="container">
+    <div class="row">
+      <div class="column-66">
+        <hr>
+       <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Padel</b><br> <br>also known as Padel or Paddle, has its origins on a not so popular variant of enclosed Tennis called Platform Tennis.<br>
+        Enrique Corcuera in 1969 decided to adapt his Squash court at his home in Acapulco (Mexico) with elements of Platform Tennis creating what he called "Paddle Corcuera".<br> He is considered the inventor of Padel.<br></h3>
+        <hr>
+      </div>
+      <div class="column-33">
+        <img style="width: 300px;height: 200px;" src="img/6.jpeg">
+        <h4 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b>Padel</b></h4>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="column-33">
+        <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Football</b></h3>
+        <img style="width: 300px;height: 200px;" src="img/1.jpeg">
+
+      </div>
+      <div class="column-66">
+        <hr>
+        <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Soccer<br></b><br>known to the rest of the world as football, is one of the oldest sports in history.<br> Dating back to 206 B.C.,
+            there are accounts of Chinese soldiers playing Tsu’chu, “kicking the ball,” to supplement their training regiments during the Han Dynasty.<br> While many other ancient cultures played games involving a ball, 
+            Tsu’chu was the first to not allow hands. Goals consisted of a net attached to two bamboo poles and elevated 30 feet in the air.<br> This is quite the contrast to modern goals that sit on the ground and extend eight feet high and 24 feet wide. The particular style of playing a game with a ball, centered around one’s feet, spread throughout the world. <br></h3>
+            <hr>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="column-66">
+        <hr>
+       <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Tennis</b><br> <br> dates back to 12th century France when it was played in the form of a handball game called ‘paume’ or palm. <br> The game involved hitting a ball back and forth by hand.<br> In time, a black leather glove was used and then from there a handle was added to the glove, which formed the first racquet.<br>
+        The game was originally played by monks as a form of entertainment during ceremonial occasions.<br> Monks all over Europe enjoyed playing the game of “jeu de Paume” during the 14th century. Over time, the game spread and evolved throughout Europe and beyond.
+        <br></h3>
+        <hr>
+      </div>
+      <div class="column-33">
+        <img style="width: 300px;height: 200px;" src="img2/tennis.jpeg">
+        <h4 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b>Padel</b></h4>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+
+<div class="container">
+  <div class="row">
+    <div class="column-33">
+      <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Football</b></h3>
+      <img style="width: 300px;height: 200px;" src="img/t5.jpeg">
+
+    </div>
+    <div class="column-66">
+      <hr>
+      <h3 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left: 20px;"><b>Sports and Games<br></b><br>are very important for the physical and mental development of a person. 
+        <br>They have several positive effects like, increased blood flow,
+        improved concentration and thinking ability, among others.<br> There is a difference between sports and games. 
+       Sports can only be played outdoors while games can be played indoors also.<br></h3>
+
+    <div style="color: green;" class="popup" onclick="myFunction()"><b><u>For more info!</u></b>
+        <span class="popuptext" id="myPopup">Popup text...</span>
+    </div>
+
+      <hr>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="center">
+    <h3>click on the following Link: </h3>
+  <a id="search" href="google.com" >Search Google</a> <br>
+  </div>
+  
+<hr>
+   <!----USER RATING--------------------------------------------------------------------------------------------------------------------------->
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div style="margin-left: 1%;">
+<span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+</div>
+<div style="width: 50%;font-weight: bold; margin-left:1%;">
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+
+</div>
+
+
+
+<script> 
+ confirm("Thank You! you've reached the Confirmation & ThankYou Page.");
+    let i = 0;
+    
+    const randomizeText = () => {
+      const phrase = document.querySelector('.random-word');
+      const compStyles = window.getComputedStyle(phrase);
+      const animation = compStyles.getPropertyValue('animation');
+      const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+      
+      const phrases = ['have an energetic experience', 'Thank you for your Reservation', 'Thank you for Trusting Us', 'We Hope we meet Your Expectations', 'Once you start you become unstoppable', 'Its Always exciting in OUTDOOR ESCAPE', 'beast-mode Activated', 'Get prepared for your next-level', 'we hope to have fun', 'Exploit your free time'];
+      
+      i = randomNum(i, phrases.length);
+      const newPhrase = phrases[i];
+
+      function myFunc(){
+         window.open("reservationtopics.html");
+      }
+
+      
+      setTimeout(() => {
+        phrase.textContent = newPhrase;
+      }, 400); // time to allow opacity to hit 0 before changing word
+    }
+    
+    const randomNum = (num, max) => {
+      let j = Math.floor(Math.random() * max);
+      
+      // ensure diff num every time
+      if (num === j) {
+        return randomNum(i, max);
+      } else {
+        return j;
+      }
+    }
+    
+    const getAnimationTime = () => {
+      const phrase = document.querySelector('.random-word');
+      const compStyles = window.getComputedStyle(phrase);
+      let animation = compStyles.getPropertyValue('animation');
+      
+      // firefox support for non-shorthand property
+      animation != "" ? animation : animation = compStyles.getPropertyValue('-moz-animation-duration');
+      
+        // webkit support for non-shorthand property
+      animation != "" ? animation : animation = compStyles.getPropertyValue('-webkit-animation-duration');
+      
+      
+      const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+      return animationTime;
+    }
+    
+    randomizeText();
+    setInterval(randomizeText, getAnimationTime());
+    
+    
+    
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+    
+    // Get the header
+    var header = document.getElementById("myHeader");
+    
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+    
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    
+    
+    //--------------------------------------------------------------------------------------------------------------------------------
+    function initComparisons() {
+      var x, i;
+      /* Find all elements with an "overlay" class: */
+      x = document.getElementsByClassName("img-comp-overlay");
+      for (i = 0; i < x.length; i++) {
+        /* Once for each "overlay" element:
+        pass the "overlay" element as a parameter when executing the compareImages function: */
+        compareImages(x[i]);
+      }
+      function compareImages(img) {
+        var slider, img, clicked = 0, w, h;
+        /* Get the width and height of the img element */
+        w = img.offsetWidth;
+        h = img.offsetHeight;
+        /* Set the width of the img element to 50%: */
+        img.style.width = (w / 2) + "px";
+        /* Create slider: */
+        slider = document.createElement("DIV");
+        slider.setAttribute("class", "img-comp-slider");
+        /* Insert slider */
+        img.parentElement.insertBefore(slider, img);
+        /* Position the slider in the middle: */
+        slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+        slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+        /* Execute a function when the mouse button is pressed: */
+        slider.addEventListener("mousedown", slideReady);
+        /* And another function when the mouse button is released: */
+        window.addEventListener("mouseup", slideFinish);
+        /* Or touched (for touch screens: */
+        slider.addEventListener("touchstart", slideReady);
+         /* And released (for touch screens: */
+        window.addEventListener("touchend", slideFinish);
+        function slideReady(e) {
+          /* Prevent any other actions that may occur when moving over the image: */
+          e.preventDefault();
+          /* The slider is now clicked and ready to move: */
+          clicked = 1;
+          /* Execute a function when the slider is moved: */
+          window.addEventListener("mousemove", slideMove);
+          window.addEventListener("touchmove", slideMove);
+        }
+        function slideFinish() {
+          /* The slider is no longer clicked: */
+          clicked = 0;
+        }
+        function slideMove(e) {
+          var pos;
+          /* If the slider is no longer clicked, exit this function: */
+          if (clicked == 0) return false;
+          /* Get the cursor's x position: */
+          pos = getCursorPos(e)
+          /* Prevent the slider from being positioned outside the image: */
+          if (pos < 0) pos = 0;
+          if (pos > w) pos = w;
+          /* Execute a function that will resize the overlay image according to the cursor: */
+          slide(pos);
+        }
+        function getCursorPos(e) {
+          var a, x = 0;
+          e = (e.changedTouches) ? e.changedTouches[0] : e;
+          /* Get the x positions of the image: */
+          a = img.getBoundingClientRect();
+          /* Calculate the cursor's x coordinate, relative to the image: */
+          x = e.pageX - a.left;
+          /* Consider any page scrolling: */
+          x = x - window.pageXOffset;
+          return x;
+        }
+        function slide(x) {
+          /* Resize the image: */
+          img.style.width = x + "px";
+          /* Position the slider: */
+          slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+        }
+      }
+    }
+    
+    initComparisons();
+    //---------------------------------------------------------------------------------------------------------------------------------
+    // When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+    
+</script>
+    
+    
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+    <!-- Footer -->
+    <div style = "position:relative;  top:20px;">
+        <!-- Footer -->
+        <footer
+                class="text-center text-lg-start text-white"
+                style="background-color: #06283d"
+                >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">FOOTER CONTENT</h5>
+    
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae modi cum ipsam ad, illo possimus laborum ut
+                    reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+                    Reiciendis assumenda iusto sapiente inventore animi?
+                </p>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+    
+                <ul class="list-unstyled mb-0">
+                    <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+    
+                <ul class="list-unstyled mb-0">
+                    <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+    
+                <ul class="list-unstyled mb-0">
+                    <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+    
+                <ul class="list-unstyled mb-0">
+                    <li>
+                    <a href="#!" class="text-white">Link 1</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 2</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 3</a>
+                    </li>
+                    <li>
+                    <a href="#!" class="text-white">Link 4</a>
+                    </li>
+                </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+    
+            <hr class="mb-4" />
+    
+            <!-- Section: CTA -->
+            <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">Register for free</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                Sign up!
+                </button>
+            </p>
+            </section>
+            <!-- Section: CTA -->
+    
+            <hr class="mb-4" />
+    
+            <!-- Section: Social media -->
+            <section class="mb-4 text-center">
+            <!-- Facebook -->
+            <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fa fa-facebook-f"> </i
+                ></a>
+    
+            <!-- Twitter -->
+            <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fa fa-twitter"></i
+                ></a>
+    
+            <!-- Google -->
+            <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fa fa-google"></i
+                ></a>
+    
+            <!-- Instagram -->
+            <a
+                class="btn btn-outline-light btn-floating m-1"
+                href="#!"
+                role="button"
+                ><i class="fa fa-instagram"></i
+                ></a>
+    
+            
+    
+            
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        
+        </footer>
+        <!-- Footer -->
+    </div>
+    </body>
+    </html>

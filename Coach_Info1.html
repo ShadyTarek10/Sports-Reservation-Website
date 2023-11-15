@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coach Details</title>
+        
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="style1.css"> 
+
+    <style>
+        
+        
+        body {
+          background-image: url('img2/graybg.jpeg');
+          background-repeat: no-repeat;
+          background-attachment:fixed;  
+          background-size: cover;
+        }
+      
+
+
+/* Container holding the image and the text */
+.container {
+  /*position: fixed;*/
+  
+  text-align: center;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+  color: black;
+ 
+}
+
+.checked {
+  color: orange;
+}
+
+/*---meet the team cards-------------------------------------------------------------------------*/
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+.bg-img {
+  /* The image used */
+  background-image: url("img2/BlurryBackground.jpeg");
+
+  /* Control the height of the image */
+  min-height: 550px;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  /*position:fixed;*/
+  
+  left: 50%;
+ /* transform: translate(-50%, -50%);*/
+  text-shadow: 2px;
+  text-decoration: solid;
+}
+
+/*---GLOW TEXT--------------------------------*/
+.glow {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(180, 229, 180), 0 0 40px rgb(180, 229, 180), 0 0 50px rgb(180, 229, 180), 0 0 60px rgb(180, 229, 180), 0 0 70px rgb(180, 229, 180);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #239275, 0 0 40px #239275, 0 0 50px #239275, 0 0 60px #239275, 0 0 70px #239275, 0 0 80px #239275;
+  }
+}
+
+/*--------------zigzag layout--------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.ZigZagcontainer {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+  
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*-----placing images next to each other*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+    </style>
+    </head>
+    <body>
+        <!--navbar-->
+       <nav class="navbar navbar-expand-lg navbar-light" style="background-color:beige; margin-bottom: 0;">
+           <a class="navbar-brand" href="#"><b>Outdoor Escape</b></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler9"
+               aria-controls="navbarToggler9" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarToggler9">
+               <ul class="navbar-nav">
+                   <li class="nav-item">
+                       <a class="nav-link" href="HomePage.html">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#">About</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#">Services</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#">Contact</a>
+                   </li>
+               
+                   <li class="nav-item " >
+                       <a class="nav-link" href="loginform1.html" >  Logout  </a>
+                       
+                   </li>
+                   
+                   <div class="icon" >
+                     
+                    <img src="img/icon.png" width="50" height="40" alt="Tennis-icon">
+                    <img src="img/escapeout.jpeg" width="50" height="40" alt="Tennis-icon">
+                     </div>
+               </ul>
+               
+           </div>
+       </nav>
+       
+            <!--navbar-->
+
+
+        <div class="bg-img"> 
+         <div class="container">
+            <img class="centered" style="margin-top: 70px ;margin-left: 150px;margin-bottom: 50px; height: 400px;width: 900px;" src="img2/background.jpeg" alt="">    
+            <div  class="glow" style="margin-left: 150px;"><h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><i><b><u> Escape Outdoor's Team Information</u></b></i></h2></div>
+        </div>
+        
+        </div>
+        <br>
+        <hr>
+        <!---zigzag layout--------->
+        <div class="ZigZagcontainer">
+          <div class="row">
+            <div class="column-66">
+              <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b><i>ThrowBack Events!</i></b></h3>
+                <!-- Add icon library -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <div style="margin-left:50px;">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+                <p>Over all Rating on our regular Events!</p>
+                
+              <div>
+                    
+                <div class="row">
+                  <div class="column">
+                    <img style="height: 200px;width:300px;"src="img2/foot.jpeg">
+                    <h4>Football team Participating in final Round Event</h4> 
+                  </div>
+                  <div class="column">
+                    <img style="height: 200px;width:300px;"src="img2/padel.jpeg">
+                    <h4>Our Golden Team winning their golden medals</h4>
+                  </div>               
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img style="height: 200px;width:300px;border-radius:1px;"src="img2/tennis1.jpeg">
+                    <h4>Tennis Team rocking it as usual</h4>
+                  </div>
+                  <div class="column">
+                    <img style="height: 200px;width:300px;"src="img/t6.jpeg">
+                    <h4>Huge event gathering all the Silver Rankers!</h4>
+                  </div>             
+                </div>                  
+        
+                  
+            </div>
+            </div>
+            <div class="column-33">
+              <img style="height: 200px ;width: 350px ;" src="img2/Medals.jpeg">
+              <br>
+              <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-top: 20px;">Rank Levels</h3>
+              <br>
+              <hr>
+              <h5>3 main levels are being provided by the Escape Outdoors Family<br><b class="glow">1st:Gold Rank</b><br>Achieved by our outstanding members and top notch Clients!
+                                                                               <br><b class="glow">2nd:Silver Rank</b><br>Nailed by our Competitive clients that never gives up<br> on their Dreams!
+                                                                               <br><b class="glow">3rd:Bronz Rank</b><br>Given to our Ambitious Atheletes to be!</h5>
+            </div>
+          </div>
+          <hr>
+        </div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="column-33">
+             <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><b><i>Escape Outdoor's Family </i></b></h2>
+
+             <!-- Add icon library -->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star"></span>
+             <br>
+             <hr>
+              <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatem perferendis eveniet eaque excepturi, commodi asperiores explicabo ea quia suscipit porro id laborum mollitia totam reiciendis voluptatum aperiam qui neque!</h3>
+            </div>
+            <div class="column-66">
+              
+              <div class="row">
+                <div class="column">
+                  <div class="coachcard">
+                    <img src="img2/person2.jpeg" alt="Jane" style="width:100%">
+                    <div class="container">
+                      <h2>Jack Stephan</h2>
+                      <p class="title">CEO &amp; Founder</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>example@example.com</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+                <br>
+
+                <div class="column">
+                  <div class="coachcard">
+                    <img src="img2/person3.jpeg" alt="Mike" style="width:100%">
+                    <div class="container">
+                      <h2>Everly Green</h2>
+                      <p class="title">Tennis Department head</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>example@example.com</p>
+                     
+                    </div>
+                  </div>
+                </div>
+              
+                <br>
+
+                <div class="column">
+                  <div class="coachcard">
+                    <img src="img2/person7.jpeg" alt="John" style="width:100%">
+                    <div class="container">
+                      <h2>Robin Mathew</h2>
+                      <p class="title">Head coach of Football Teams</p>
+                      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      <p>example@example.com</p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+<script>
+  confirm("You're now viewing the Coach information Page.");
+</script>
+
+ <!------------------------------------------------------------------------------------------------------------------------------------>
+
+    <!-- Footer -->
+<div style = "position:relative;  top:20px;">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #06283d"
+          >
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+      <!--Grid row-->
+      <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+          <p style="color: white;">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae modi cum ipsam ad, illo possimus laborum ut
+              reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+              Reiciendis assumenda iusto sapiente inventore animi?
+          </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+              <li>
+              <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 4</a>
+              </li>
+          </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+              <li>
+              <a style="color: white;" href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+              <a style="color: white;" href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+              <a style="color: white;" href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+              <a style="color: white;" href="#!" class="text-white">Link 4</a>
+              </li>
+          </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+              <li>
+              <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 4</a>
+              </li>
+          </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+              <li>
+              <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+              <a href="#!" class="text-white">Link 4</a>
+              </li>
+          </ul>
+          </div>
+          <!--Grid column-->
+      </div>
+      <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+
+      <hr class="mb-4" />
+
+      <!-- Section: CTA -->
+      <section class="">
+      <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+          <button type="button" class="btn btn-outline-light btn-rounded">
+          Sign up!
+          </button>
+      </p>
+      </section>
+      <!-- Section: CTA -->
+
+      <hr class="mb-4" />
+
+      <!-- Section: Social media -->
+      <section class="mb-4 text-center">
+      <!-- Facebook -->
+      <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="#!"
+          role="button"
+          ><i class="fa fa-facebook-f"> </i
+          ></a>
+
+      <!-- Twitter -->
+      <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="#!"
+          role="button"
+          ><i class="fa fa-twitter"></i
+          ></a>
+
+      <!-- Google -->
+      <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="#!"
+          role="button"
+          ><i class="fa fa-google"></i
+          ></a>
+
+      <!-- Instagram -->
+      <a
+          class="btn btn-outline-light btn-floating m-1"
+          href="#!"
+          role="button"
+          ><i class="fa fa-instagram"></i
+          ></a>
+
+      
+
+      
+      </section>
+      <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  
+  </footer>
+  <!-- Footer -->
+</div>
+    </body>
+    
+</html>
